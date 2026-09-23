@@ -1,63 +1,57 @@
 /* ==========================================================================
-   CeloraIT Portfolio - Core Design System & Global Styles
+   CeloraIT Portfolio - Clean, Noise-Free, Minimalist Design System
    Brand Identity: Software • SaaS • ERP • AI • Cloud • Mobile Apps
    ========================================================================== */
 
 :root {
-  /* Brand Color Palette */
-  --bg-primary: #040c10;
-  --bg-secondary: #08171d;
-  --bg-card: rgba(10, 29, 36, 0.7);
-  --bg-card-hover: rgba(14, 39, 48, 0.85);
-  --bg-card-elevated: rgba(13, 38, 47, 0.9);
-  --bg-glass: rgba(8, 25, 32, 0.65);
+  /* Clean Dark Matte Palette (Noise-Free) */
+  --bg-primary: #090d10;
+  --bg-secondary: #0d1216;
+  --bg-surface: #10161b;
+  --bg-surface-hover: #141c22;
+  --bg-card: rgba(255, 255, 255, 0.025);
+  --bg-card-hover: rgba(255, 255, 255, 0.045);
   
-  /* Glowing Neon Accents */
-  --accent-emerald: #00f5a0;
-  --accent-teal: #00d2b4;
-  --accent-cyan: #38bdf8;
-  --accent-blue: #0284c7;
-  --accent-purple: #8b5cf6;
+  /* Restrained, Tasteful Accents */
+  --accent-primary: #00e599;
+  --accent-secondary: #38bdf8;
+  --accent-muted: rgba(0, 229, 153, 0.12);
   
-  /* Text Colors */
+  /* Typography Colors */
   --text-main: #f1f5f9;
   --text-muted: #94a3b8;
   --text-dim: #64748b;
   --text-highlight: #ffffff;
   
-  /* Borders & Dividers */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-card: rgba(0, 245, 160, 0.15);
-  --border-card-hover: rgba(0, 245, 160, 0.45);
-  --border-glow: 0 0 25px rgba(0, 245, 160, 0.2);
+  /* Minimal Crisp Borders */
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-card: rgba(255, 255, 255, 0.1);
+  --border-card-hover: rgba(255, 255, 255, 0.18);
   
-  /* Shadows & Glows */
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 20px 45px -10px rgba(0, 0, 0, 0.7);
-  --glow-emerald: 0 0 25px rgba(0, 245, 160, 0.35);
-  --glow-cyan: 0 0 25px rgba(56, 189, 248, 0.35);
+  /* Natural Shadows (No Loud Glowing Halos) */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
   
   /* Typography */
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
   /* Transitions */
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.25s ease;
 
   /* Layout */
-  --container-width: 1240px;
-  --header-height: 80px;
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --container-width: 1180px;
+  --header-height: 72px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
   --radius-full: 9999px;
 }
 
 /* --------------------------------------------------------------------------
-   CSS Reset & Base
+   CSS Reset & Base (Pure & Clean)
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -79,34 +73,12 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
-  background-image: 
-    radial-gradient(circle at 15% 15%, rgba(0, 245, 160, 0.05) 0%, transparent 45%),
-    radial-gradient(circle at 85% 35%, rgba(56, 189, 248, 0.04) 0%, transparent 45%),
-    radial-gradient(circle at 50% 80%, rgba(0, 210, 180, 0.04) 0%, transparent 50%),
-    linear-gradient(to bottom, #040c10 0%, #06151c 50%, #030a0e 100%);
-  background-attachment: fixed;
   min-height: 100vh;
-}
-
-/* Background Subtle Grid Texture */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* Selection Color */
 ::selection {
-  background-color: rgba(0, 245, 160, 0.3);
+  background-color: rgba(0, 229, 153, 0.25);
   color: #ffffff;
 }
 
@@ -144,67 +116,54 @@ button, input, textarea, select {
   padding-left: 24px;
   padding-right: 24px;
   position: relative;
-  z-index: 1;
 }
 
 .section {
-  padding-top: 110px;
-  padding-bottom: 110px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   position: relative;
-  z-index: 1;
 }
 
+/* Minimalist Clean Section Tag */
 .section-tag {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  background: rgba(0, 245, 160, 0.08);
-  border: 1px solid rgba(0, 245, 160, 0.25);
+  gap: 6px;
+  padding: 4px 12px;
+  background: var(--accent-muted);
+  border: 1px solid rgba(0, 229, 153, 0.2);
   border-radius: var(--radius-full);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--accent-emerald);
-  letter-spacing: 0.05em;
+  color: var(--accent-primary);
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-bottom: 16px;
-  backdrop-filter: blur(8px);
-}
-
-.section-tag .pulse-dot {
-  width: 7px;
-  height: 7px;
-  background-color: var(--accent-emerald);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--accent-emerald);
-  animation: pulse-ring 2s infinite ease-in-out;
+  margin-bottom: 14px;
 }
 
 .section-header {
   text-align: center;
-  max-width: 760px;
-  margin: 0 auto 64px auto;
+  max-width: 680px;
+  margin: 0 auto 56px auto;
 }
 
 .section-title {
-  font-size: clamp(2rem, 3.8vw, 2.85rem);
-  font-weight: 800;
-  line-height: 1.2;
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--text-highlight);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
-.section-title .text-gradient {
-  background: linear-gradient(135deg, #ffffff 10%, #00f5a0 60%, #38bdf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.section-title .text-accent {
+  color: var(--accent-primary);
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 /* --------------------------------------------------------------------------
@@ -214,48 +173,44 @@ button, input, textarea, select {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 13px 26px;
+  gap: 8px;
+  padding: 11px 22px;
   border-radius: var(--radius-sm);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   cursor: pointer;
-  transition: all var(--transition-normal);
+  transition: all var(--transition-fast);
   text-decoration: none;
   position: relative;
-  overflow: hidden;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #00f5a0 0%, #00d2b4 50%, #0284c7 100%);
-  color: #040d12;
-  box-shadow: 0 4px 20px rgba(0, 245, 160, 0.35);
-  font-weight: 700;
+  background: var(--accent-primary);
+  color: #050a0d;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 245, 160, 0.55);
-  filter: brightness(1.05);
+  background: #00f5a3;
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-main);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-card);
 }
 
 .btn-secondary:hover {
-  background: rgba(0, 245, 160, 0.1);
-  border-color: var(--accent-emerald);
-  color: var(--accent-emerald);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .btn-sm {
-  padding: 8px 16px;
-  font-size: 0.85rem;
+  padding: 7px 15px;
+  font-size: 0.84rem;
   border-radius: 6px;
 }
 
@@ -263,10 +218,10 @@ button, input, textarea, select {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-subtle);
   color: var(--text-muted);
   cursor: pointer;
@@ -274,61 +229,41 @@ button, input, textarea, select {
 }
 
 .btn-icon:hover {
-  color: var(--accent-emerald);
-  border-color: var(--accent-emerald);
-  background: rgba(0, 245, 160, 0.1);
+  color: var(--text-highlight);
+  border-color: var(--border-card);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* --------------------------------------------------------------------------
-   Animations
+   Clean Panels & Badges (No Neon Noise)
    -------------------------------------------------------------------------- */
-@keyframes pulse-ring {
-  0% { transform: scale(0.95); opacity: 0.8; }
-  50% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(0.95); opacity: 0.8; }
-}
-
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes glow-pulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
-}
-
-/* Glassmorphism Surface Base */
 .glass-panel {
   background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  transition: all var(--transition-normal);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
 }
 
 .glass-panel:hover {
   border-color: var(--border-card);
-  box-shadow: var(--border-glow);
+  background: var(--bg-card-hover);
 }
 
-/* Badge tags */
+/* Tech Pill */
 .tech-pill {
   display: inline-flex;
   align-items: center;
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  font-size: 0.75rem;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 0.74rem;
   font-weight: 500;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #cbd5e1;
-  transition: all var(--transition-fast);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #94a3b8;
+  transition: color var(--transition-fast);
 }
 
 .tech-pill:hover {
-  background: rgba(0, 245, 160, 0.12);
-  border-color: var(--accent-emerald);
-  color: var(--accent-emerald);
+  color: var(--accent-primary);
+  border-color: rgba(0, 229, 153, 0.25);
 }

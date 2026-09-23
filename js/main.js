@@ -87,15 +87,13 @@ function renderProjects(filter = 'all') {
     : CELORA_PROJECTS.filter(p => p.category === filter || (filter === 'saas' && (p.category === 'saas' || p.badge.includes('SaaS') || p.badge.includes('ERP'))));
 
   container.innerHTML = filtered.map(p => {
-    const metricPills = p.metrics.map(m => `
-      <div class="preview-pill">
-        <span>${m.label}:</span> <strong>${m.value}</strong>
-      </div>
-    `).join('');
-
-    const techTags = p.technologies.slice(0, 4).map(t => `
+    const techTags = p.technologies.slice(0, 3).map(t => `
       <span class="tech-pill">${t}</span>
-    `).join('') + (p.technologies.length > 4 ? `<span class="tech-pill">+${p.technologies.length - 4}</span>` : '');
+    `).join('') + (p.technologies.length > 3 ? `<span class="tech-pill">+${p.technologies.length - 3}</span>` : '');
+
+    const metricsHtml = p.metrics.slice(0, 2).map(m => `
+      <span class="mini-metric-pill"><span>${m.label}:</span> <strong>${m.value}</strong></span>
+    `).join('');
 
     return `
       <div class="project-card" onclick="openProjectModal('${p.id}')">
@@ -108,30 +106,21 @@ function renderProjects(filter = 'all') {
           <p class="project-card-subtitle">${p.subtitle}</p>
         </div>
 
-        <div class="project-card-preview" style="background: ${p.gradient};">
-          <div class="preview-browser-bar">
-            <div class="preview-dot dot-red"></div>
-            <div class="preview-dot dot-yellow"></div>
-            <div class="preview-dot dot-green"></div>
-          </div>
-          <div class="preview-body">
-            <div class="preview-metric-pills">
-              ${metricPills}
-            </div>
-          </div>
+        <p class="project-card-desc">${p.tagline}</p>
+
+        <div class="project-metrics-mini">
+          ${metricsHtml}
         </div>
 
-        <div class="project-card-body">
-          <p class="project-card-desc">${p.tagline}</p>
-          <div class="project-tech-tags">
-            ${techTags}
-          </div>
-          <div class="project-card-footer">
-            <span class="project-view-btn">
-              View Case Study
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
+        <div class="project-tech-tags">
+          ${techTags}
+        </div>
+
+        <div class="project-card-footer">
+          <span class="project-view-btn">
+            View Case Study
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
         </div>
       </div>
     `;
