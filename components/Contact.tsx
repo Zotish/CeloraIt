@@ -175,7 +175,7 @@ export default function Contact({
                   <select
                     id="contact-service-select"
                     className="form-control"
-                    style={{ background: '#040c10', color: '#fff' }}
+                    style={{ background: '#ffffff', color: '#0f172a' }}
                     value={service}
                     onChange={(e) => setService(e.target.value)}
                   >

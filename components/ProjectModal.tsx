@@ -77,7 +77,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </svg>
                 The Problem
               </h4>
-              <p style={{ color: '#e2e8f0', fontSize: '0.92rem', lineHeight: 1.7 }}>
+              <p style={{ color: '#334155', fontSize: '0.92rem', lineHeight: 1.7 }}>
                 {project.problem}
               </p>
             </div>
@@ -90,14 +90,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </svg>
                 CeloraIT Engineered Solution
               </h4>
-              <p style={{ color: '#e2e8f0', fontSize: '0.92rem', lineHeight: 1.7 }}>
+              <p style={{ color: '#334155', fontSize: '0.92rem', lineHeight: 1.7 }}>
                 {project.solution}
               </p>
             </div>
           </div>
 
           <div style={{ marginBottom: '28px' }}>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff', marginBottom: '16px' }}>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-highlight)', marginBottom: '16px' }}>
               Core System Capabilities
             </h3>
             <ul className="modal-features-list">
@@ -108,7 +108,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           <div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff', marginBottom: '14px' }}>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-highlight)', marginBottom: '14px' }}>
               Technologies & Infrastructure
             </h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>

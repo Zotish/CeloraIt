@@ -45,14 +45,14 @@ export default function Team() {
         {/* Technical Team Roles */}
         <div
           style={{
-            background: 'rgba(255, 255, 255, 0.02)',
+            background: 'var(--bg-secondary)',
             border: '1px solid var(--border-subtle)',
             borderRadius: 'var(--radius-md)',
             padding: '30px',
             textAlign: 'center'
           }}
         >
-          <h4 style={{ fontSize: '1.1rem', color: '#fff', marginBottom: '14px' }}>
+          <h4 style={{ fontSize: '1.1rem', color: 'var(--text-highlight)', marginBottom: '14px' }}>
             Backed by our Specialized Engineering Guild:
           </h4>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px' }}>

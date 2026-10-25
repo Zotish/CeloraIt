@@ -156,7 +156,7 @@ export default function Estimator({ onApplyEstimate }: EstimatorProps) {
                 Estimated Scope: <strong>{timeData.label}</strong> with <strong>{podData.name}</strong>
               </div>
 
-              <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', paddingTop: '18px', marginBottom: '20px' }}>
+              <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '18px', marginBottom: '20px' }}>
                 <div
                   style={{
                     fontSize: '0.8rem',

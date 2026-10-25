@@ -80,7 +80,7 @@ export default function DeliveryPods() {
 
         {/* 5-Step Development Lifecycle */}
         <div style={{ marginTop: '40px' }}>
-          <h3 style={{ textAlign: 'center', fontSize: '1.8rem', fontWeight: 800, color: '#fff', marginBottom: '8px' }}>
+          <h3 style={{ textAlign: 'center', fontSize: '1.8rem', fontWeight: 800, color: 'var(--text-highlight)', marginBottom: '8px' }}>
             Development Lifecycle
           </h3>
           <p style={{ textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '30px' }}>

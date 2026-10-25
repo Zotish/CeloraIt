@@ -22,6 +22,7 @@ export default function Footer({ onProjectClick }: FooterProps) {
               alt="CeloraIT Logo"
               width={160}
               height={42}
+              unoptimized
             />
             <p>
               CeloraIT is a modern Bangladesh-based software company building scalable digital products, SaaS platforms, ERP systems, AI-enabled automation, mobile apps, and cloud solutions.

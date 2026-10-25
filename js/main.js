@@ -204,7 +204,7 @@ function openProjectModal(projectId) {
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           The Problem
         </h4>
-        <p style="color:#e2e8f0; font-size:0.92rem; line-height:1.7;">${project.problem}</p>
+        <p style="color:#334155; font-size:0.92rem; line-height:1.7;">${project.problem}</p>
       </div>
 
       <div class="solution-box">
@@ -212,19 +212,19 @@ function openProjectModal(projectId) {
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           CeloraIT Engineered Solution
         </h4>
-        <p style="color:#e2e8f0; font-size:0.92rem; line-height:1.7;">${project.solution}</p>
+        <p style="color:#334155; font-size:0.92rem; line-height:1.7;">${project.solution}</p>
       </div>
     </div>
 
     <div style="margin-bottom: 28px;">
-      <h3 style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:16px;">Core System Capabilities</h3>
+      <h3 style="font-size:1.2rem; font-weight:700; color:var(--text-highlight); margin-bottom:16px;">Core System Capabilities</h3>
       <ul class="modal-features-list">
         ${featuresHtml}
       </ul>
     </div>
 
     <div>
-      <h3 style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:14px;">Technologies & Infrastructure</h3>
+      <h3 style="font-size:1.2rem; font-weight:700; color:var(--text-highlight); margin-bottom:14px;">Technologies & Infrastructure</h3>
       <div style="display:flex; flex-wrap:wrap; gap:8px;">
         ${techHtml}
       </div>

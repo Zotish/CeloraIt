@@ -49,6 +49,7 @@ export default function Navbar({ onEstimatorClick }: NavbarProps) {
             width={160}
             height={42}
             priority
+            unoptimized
           />
         </Link>
 
